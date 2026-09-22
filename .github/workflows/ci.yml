@@ -1,34 +1,70 @@
-name: github actions CI
-
+name: Github Actions CI
+ 
 on:
   push:
     branches:
       - main
-
+ 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
-
+ 
     steps:
-      - name: check repository
+      - name: Check repository
         uses: actions/checkout@v4
-
-      - name: show current user
+     
+      - name: Show current user
         run: whoami
-
-      - name: list project files
-        run: ls -a  
-
-      - name: execute files
-        run : 
+ 
+      - name: List project files
+        run: ls -a
+     
+      - name: Execute files
+        run: |
               chmod +x app.sh
               chmod +x test.sh
-
-      - name: run application
-        run: ./app.sh       
-
-      - name: run test
-        run: ./test.sh 
-
+     
+      - name: Run application
+        run: ./app.sh
+ 
+      - name: Run test
+        run: ./test.sh
+ 
       - name: Success
-        run: echo " Completed"    
+        run: echo " Completed"
+ 
+name: Github Actions CI
+ 
+on:
+  push:
+    branches:
+      - main
+ 
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+ 
+    steps:
+      - name: Check repository
+        uses: actions/checkout@v4
+     
+      - name: Show current user
+        run: whoami
+ 
+      - name: List project files
+        run: ls -a
+     
+      - name: Execute files
+        run: |
+              chmod +x app.sh
+              chmod +x test.sh
+     
+      - name: Run application
+        run: ./app.sh
+ 
+      - name: Run test
+        run: ./test.sh
+ 
+      - name: Success
+        run: echo " Completed"
+ 
