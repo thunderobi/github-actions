@@ -7,7 +7,7 @@ on:
  
 jobs:
   build-and-test:
-    runs-on: Ubuntu 24.04
+    runs-on: Ubuntu-latest
  
     steps:
       - name: Check repository
