@@ -1,0 +1,34 @@
+name: github actions CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: check repository
+        uses: actions/checkout@v4
+
+      - name: show current user
+        run: whoami
+
+      - name: list project files
+        run: ls -a  
+
+      - name: execute files
+        run : 
+              chmod +x app.sh
+              chmod +x test.sh
+
+      - name: run application
+        run: ./app.sh       
+
+      - name: run test
+        run: ./test.sh 
+
+      - name: Success
+        run: echo " Completed"    
